@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stack Mine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="header">
+    <div class="logo">Stack<span>Mine</span></div>
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-label">Score</div>
+        <div class="stat-value" id="score-display">0</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Best</div>
+        <div class="stat-value" id="best-score">0</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="game-wrap">
+    <canvas id="c" width="420" height="560"></canvas>
+
+    <div class="overlay" id="start-overlay">
+      <div class="overlay-title">Stack<br><span style="color:var(--accent)">Mine</span></div>
+      <div class="overlay-sub">tap or click to drop a block<br>stack as high as you can</div>
+      <button class="btn" id="start-btn">Start Game</button>
+    </div>
+
+    <div class="overlay hidden" id="over-overlay">
+      <div style="font-family:'Space Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:1px;text-transform:uppercase">game over</div>
+      <div class="over-score" id="final-score">0</div>
+      <div class="overlay-sub" id="over-msg">nice stack!</div>
+      <button class="btn" id="retry-btn">Play Again</button>
+    </div>
+
+    <div class="perfect-flash" id="perfect-flash">Perfect!</div>
+  </div>
+
+  <div class="hint" id="hint-text">tap / click / spacebar to drop</div>
+
+  <div class="controls">
+    <button class="ctrl-btn" id="speed-btn">speed: normal</button>
+    <button class="ctrl-btn" id="sound-btn">sound: off</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
