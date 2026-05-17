@@ -76,3 +76,31 @@ canvas {
   cursor: pointer; letter-spacing: 0.5px;
   transition: background 0.15s, transform 0.1s;
 }
+.btn:hover { background: rgba(124,106,255,0.15); }
+.btn:active { transform: scale(0.97); }
+
+.hint { margin-top: 16px; font-family: 'Space Mono', monospace; font-size: 11px; color: var(--muted); text-align: center; letter-spacing: 0.5px; }
+
+.perfect-flash {
+  position: absolute; top: 40%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px; font-weight: 800; color: var(--accent3);
+  pointer-events: none; opacity: 0; transition: none; letter-spacing: -0.5px;
+}
+.perfect-flash.show { animation: flashUp 0.8s ease forwards; }
+@keyframes flashUp {
+  0%   { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+  20%  { opacity: 1; transform: translate(-50%, -60%) scale(1.1); }
+  80%  { opacity: 1; transform: translate(-50%, -70%) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -80%) scale(0.9); }
+}
+
+.controls { margin-top: 16px; display: flex; gap: 12px; width: 100%; max-width: 420px; }
+.ctrl-btn {
+  flex: 1; padding: 12px; border-radius: 12px;
+  border: 1px solid var(--border); background: var(--surface);
+  color: var(--muted); font-family: 'Space Mono', monospace;
+  font-size: 12px; cursor: pointer;
+  transition: border-color 0.15s, color 0.15s; text-align: center;
+}
+.ctrl-btn:hover { border-color: var(--accent); color: var(--text); }
