@@ -29,7 +29,7 @@ https://sonali1502-sona.github.io/Stack_mine/
 
 ## 📷 Screenshot
 
-<img width="2880" height="1524" alt="Stack Mine screenshot" src="Screenshot 2026-05-18 215935.png" />
+<img width="2880" height="1524" alt="Stack Mine screenshot" src="Screenshot.png" />
 
 ---
 
